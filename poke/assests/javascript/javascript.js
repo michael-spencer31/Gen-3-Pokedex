@@ -1,4 +1,4 @@
-unction empty(){
+function empty(){
     doucment.getElementById("demo").remove();
 }
 
