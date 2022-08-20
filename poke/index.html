@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title> NHL </title>
+
+<link type = "text/css" rel="stylesheet" href="assests/css/style.css" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>  
+    </head>
+    <body>
+
+    <ul id="team-list" class="numbered-list"></ul>
+    <ul id="team" class="non-list"></ul>
+    <ul id="player-list" class="numbered-list"></ul>
+    <ul id="player" class="non-list"></ul>
+
+        <label>Enter text: </label><br>
+        <input type=text id="userin"><br>
+        <input type=submit value="Enter text" onclick="displayinput()"><br>
+
+         <!-- onchange="displayinput()"><br> --->
+
+        <!---
+        <script>
+            function displayinput(){
+                document.getElementById("demo").innerHTML = document.getElementById("userin").value;
+            }
+        </script>
+        --->
+     
+
+        <body onload="empty()">
+
+        <p id="demo"></p>
+
+        <div id="imghold">
+
+    <script type = "text/javascript" src="assests/javascript/javascript.js"></script>
+    </body>
+</html>
+
+

@@ -1,0 +1,21 @@
+html, body{
+	margin:  0;
+}
+ul{
+	float:  left;
+	margin-right:  10px;
+}
+.numbered-list{
+	list-style-type: decimal;
+}
+.non-list{
+	list-style-type: none;
+}
+button{
+	background: none!important;
+	color: blue;
+	border: none;
+	padding: 0!important;
+	font: inherit;
+	cursor: pointer;
+}
