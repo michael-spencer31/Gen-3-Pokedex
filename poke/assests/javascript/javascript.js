@@ -1,10 +1,10 @@
 function empty(){
-    doucment.getElementById("demo").remove();
+    doucment.getElementById("abilityDescription").remove();
 }
 
 function getAbilities(){
 
-    var input = document.getElementById("demo").innerHTML = document.getElementById("userin").value;
+    var input = document.getElementById("abilityDescription").innerHTML = document.getElementById("userin").value;
     var abilityURL = "https://pokeapi.co/api/v2/ability/" + input + "/";
 
     $.ajax({
@@ -12,7 +12,7 @@ function getAbilities(){
         method: "GET"
     }).done(function(data){
        
-        document.getElementById('demo').innerHTML = data.effect_entries[1].effect;
+        document.getElementById('abilityDescription').innerHTML = data.effect_entries[1].effect;
 
         var names = [];
 
@@ -46,10 +46,32 @@ function getAbilities(){
                 imgSource = pokeData.sprites.front_default;
                 var x = new Image();
                 x.src = imgSource;
-                document.getElementById('test').appendChild(x);            
+                document.getElementById('abilityImages').appendChild(x);            
             });
             pokemonURL = "https://pokeapi.co/api/v2/pokemon/" + names[counter] + "/";
             counter++;
         }
     });
+}
+//this code controls all the tabs at the top of the page
+function openTabs(evt, tabName){
+
+    //declare variables
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+
+    for(i = 0; i < tabcontent.length; i++){
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+
+    for(i = 0; i < tablinks.length; i++){
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+function defaultTab(){
+    document.getElementById("defaultOpen").click();
 }
