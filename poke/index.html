@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<title> NHL </title>
+<title> Poke Data </title>
 
 <link type = "text/css" rel="stylesheet" href="assests/css/style.css" />
 
@@ -15,16 +15,31 @@
     <ul id="player-list" class="numbered-list"></ul>
     <ul id="player" class="non-list"></ul>
 
+    <!--- Tab Class --->
+    <div class="tab">
+        <button class="tablinks" onclick="openTabs(event, 'abilities')" id="defaultOpen">Abilities</button>
+        <button class="tablinks" onclick="openTabs(event, 'pokedex')">Pokedex</button>
+    </div>
+    <!--- Ability Content Tab --->
+    <div id="abilities" class="tabcontent">
+        <h3>Abilities</h3>
         <label>Enter text: </label><br>
         <input type=text id="userin">
         <input type=submit value="Search" onclick="getAbilities()"><br>
 
         <body onload="empty()">
 
-        <p id="demo"></p>
-        <p id="test"></p>
+        <p id="abilityDescription"></p>
+        <p id="abilityImages"></p>
         <p id="names"></p>
         <div id="imghold">
+    </div>
+    </div>
+    <!--- Pokedex Content Tab --->
+    <div id="pokedex" class="tabcontent">
+        <h3>Pokedex</h3>
+    </div>
+
 
     <script type = "text/javascript" src="assests/javascript/javascript.js"></script>
     </body>
