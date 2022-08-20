@@ -1,21 +1,31 @@
-html, body{
-	margin:  0;
+/* style the tab */
+.tab {
+	overflow:  hidden;
+	border:  1px solid #ccc;
+	background-color:  #f1f1f1;
 }
-ul{
+/* style the buttons */
+.tab button {
+	background-color:  inherit;
 	float:  left;
-	margin-right:  10px;
-}
-.numbered-list{
-	list-style-type: decimal;
-}
-.non-list{
-	list-style-type: none;
-}
-button{
-	background: none!important;
-	color: blue;
 	border: none;
-	padding: 0!important;
-	font: inherit;
-	cursor: pointer;
+	outline: none;
+	cursor:  pointer;
+	padding:  14px 16px;
+	transition: 0.3s;
+}
+/* change background color of buttons on hover */
+.tab button:hover {
+	background-color: #ddd;
+}
+/* create an active/current tablink class */
+.tab button.active {
+	background-color: #ccc;
+}
+/* style the tab content */
+.tabcontent{
+	display:  none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top:  none;
 }
