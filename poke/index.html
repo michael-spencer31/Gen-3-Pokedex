@@ -19,6 +19,7 @@
     <div class="tab">
         <button class="tablinks" onclick="openTabs(event, 'abilities')" id="defaultOpen">Abilities</button>
         <button class="tablinks" onclick="openTabs(event, 'pokedex')">Pokedex</button>
+        <button class="tablinks" onclick="openTabs(event, 'items')">Items</button>
     </div>
     <!--- Ability Content Tab --->
     <div id="abilities" class="tabcontent">
@@ -30,6 +31,8 @@
         <body onload="empty()">
 
         <p id="abilityDescription"></p>
+        <p>Pokemon with this ability:</p>
+
         <p id="abilityImages"></p>
         <p id="names"></p>
         <div id="imghold">
@@ -38,6 +41,21 @@
     <!--- Pokedex Content Tab --->
     <div id="pokedex" class="tabcontent">
         <h3>Pokedex</h3>
+        <label>Enter text: </label><br>
+        <input type=text id="pokemonin">
+        <input type=submit value="Search" onclick="getPokemon()"><br>
+
+        <p id="itemDescription"></p>
+        <label id="pokemondata"></label>
+    </div>
+    <!--- Items Content Tab --->
+    <div id="items" class="tabcontent">
+        <h3>Items</h3>
+        <label>Enter an item below to see it's description. For multi word items like life orb, enter as life-orb</label><br><br>
+        <input type="text" id="itemin">
+        <input type="submit" value="Search" onclick="getItems()">
+        <p id="itemdata"></p>
+        <p id="itemimage"></p>
     </div>
 
 
