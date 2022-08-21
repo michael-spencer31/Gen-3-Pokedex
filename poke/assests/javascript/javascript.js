@@ -2,11 +2,14 @@ function empty(){
     doucment.getElementById("abilityDescription").remove();
 }
 
+/* this code handle all ability related activities */
 function getAbilities(){
 
+    /* create a query using the user input to call on the api */
     var input = document.getElementById("abilityDescription").innerHTML = document.getElementById("userin").value;
     var abilityURL = "https://pokeapi.co/api/v2/ability/" + input + "/";
 
+    //create and then call the api using the ajax jQuery method
     $.ajax({
         url: abilityURL,
         method: "GET"
@@ -51,6 +54,41 @@ function getAbilities(){
             pokemonURL = "https://pokeapi.co/api/v2/pokemon/" + names[counter] + "/";
             counter++;
         }
+    });
+}
+function getPokemon(){
+
+    var pokeURL = "https://pokeapi.co/api/v2/pokemon/crobat";
+
+    $.ajax({
+        url: pokeURL,
+        method: "GET"
+    }).done(function(pokemonData){
+
+        document.getElementById('pokemondata').innerHTML = pokemonData.height * 10 + "cm\n";
+        document.getElementById('pokemondata').append("\n\n\n");
+        document.getElementById('pokemondata').append(pokemonData.types[0].type.name + " ");
+        document.getElementById('pokemondata').append(pokemonData.types[1].type.name);
+    });
+}
+function getItems(){
+
+    var input = document.getElementById('itemin').value;
+    var itemURL = "https://pokeapi.co/api/v2/item/" + input + "/";
+
+    $.ajax({
+        url: itemURL,
+        method: "GET"
+    }).done(function(itemData){
+
+        //get the effect of the given item from the api
+        document.getElementById('itemdata').innerHTML = itemData.effect_entries[0].short_effect;
+
+        //create an image and use the data to populate it
+        itemImg = itemData.sprites.default;
+        var y = new Image();
+        y.src = itemImg;
+        document.getElementById('itemimage').appendChild(y);
     });
 }
 //this code controls all the tabs at the top of the page
