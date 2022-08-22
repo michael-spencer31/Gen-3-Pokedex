@@ -20,6 +20,7 @@
         <button class="tablinks" onclick="openTabs(event, 'abilities')" id="defaultOpen">Abilities</button>
         <button class="tablinks" onclick="openTabs(event, 'pokedex')">Pokedex</button>
         <button class="tablinks" onclick="openTabs(event, 'items')">Items</button>
+        <button class="tablinks" onclick="openTabs(event, 'moves')">Moves</button>
     </div>
     <!--- Ability Content Tab --->
     <div id="abilities" class="tabcontent">
@@ -40,13 +41,29 @@
     </div>
     <!--- Pokedex Content Tab --->
     <div id="pokedex" class="tabcontent">
+        <body onload="empty()">
         <h3>Pokedex</h3>
         <label>Enter text: </label><br>
         <input type=text id="pokemonin">
         <input type=submit value="Search" onclick="getPokemon()"><br>
-
-        <p id="itemDescription"></p>
-        <label id="pokemondata"></label>
+        <label>Type:</label>
+        <label id="pokemontype"></label>
+        <label id="secondtype"></label><br>
+        <label>Held item:</Label>
+        <label id="helditemdata"></label><br>
+        <label>Height:</label>
+        <label id=height></label><br>
+        <label>Weight:</label>
+        <label id="weight"></label><br>
+        <label>Ability:</label>
+        <label id="pokemonability"></label><br>
+        <label>Second Ability:</label>
+        <label id="secondability"></label><br>
+        <label>Hidden Ability:</label>
+        <label id="hiddenability"></label><br>
+        <label>Dex Number:</label>
+        <label id="pokedexnumber"></label><br>
+        <label id="pokemonimage"></label>
     </div>
     <!--- Items Content Tab --->
     <div id="items" class="tabcontent">
@@ -56,6 +73,22 @@
         <input type="submit" value="Search" onclick="getItems()">
         <p id="itemdata"></p>
         <p id="itemimage"></p>
+    </div>
+    <!--- Move Content Tab--->
+    <div id="moves" class="tabcontent">
+        <h3>Moves</h3>
+        <input type="text" id="movein">
+        <input type="submit" value="Search" onclick="getMoves()"><br>
+        <label>Move power:</label>
+        <label id="movepower"></label><br>
+        <label>Accuracy:</label>
+        <label id="moveaccuracy"></label><br>
+        <label>PP:</label>
+        <label id="movepp"></label><br>
+        <label>Move type:</label>
+        <label id="movetype"></label><br>
+        <label>Effect:</label>
+        <label id="moveeffect"></label><br>
     </div>
 
 
