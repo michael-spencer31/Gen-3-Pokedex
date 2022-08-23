@@ -21,7 +21,11 @@
         <button class="tablinks" onclick="openTabs(event, 'pokedex')">Pokedex</button>
         <button class="tablinks" onclick="openTabs(event, 'items')">Items</button>
         <button class="tablinks" onclick="openTabs(event, 'moves')">Moves</button>
+        <button class="tablinks" onclick="openTabs(event, 'encounters')">Encounters</button>
     </div>
+    <script>
+        document.getElementById("defaultOpen").click();
+    </script>
     <!--- Ability Content Tab --->
     <div id="abilities" class="tabcontent">
         <h3>Abilities</h3>
@@ -89,6 +93,21 @@
         <label id="movetype"></label><br>
         <label>Effect:</label>
         <label id="moveeffect"></label><br>
+        <label>Priority:</label>
+        <label id="movepriority"></label><br>
+        <label>Healing Power:</label>
+        <label id="movehealing"></label><br>
+        <label>Critical Hit Bonus:</label>
+        <label id="movecrit"></label><br>
+    </div>
+
+    <div id="encounters" class="tabcontent">
+        <h3>Encounters</h3>
+        <input type="text" id="encounterin">
+        <input type="submit" value="Search" onclick="getEncounters()">
+        <input type="submit" value="Reset" onclick="resetEncounters()"><br>
+        <labal>Encounter Details</labal>
+        <label id="encounterdetails"></label><br>
     </div>
 
 
