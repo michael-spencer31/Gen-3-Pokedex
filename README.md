@@ -1,3 +1,3 @@
-# Pokemon Data
+# Pokedex
 
-Work in progress on a pokedex type site using the Poke API. 
+A Pokedex for the generation 3 games (ruby/sapphire/emerald). 
