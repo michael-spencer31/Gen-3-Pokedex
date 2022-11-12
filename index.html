@@ -1,119 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" />
-<title> Poke Data </title>
-
-<link type = "text/css" rel="stylesheet" href="style.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>  
-    </head>
-    <body>
-
-    <ul id="team-list" class="numbered-list"></ul>
-    <ul id="team" class="non-list"></ul>
-    <ul id="player-list" class="numbered-list"></ul>
-    <ul id="player" class="non-list"></ul>
-
-    <!--- Tab Class --->
+    <meta charset="UTF-8" />
+    <title> Poke Data </title>
     
+    <!--- css files --->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <meta name="author" content="Michael Spencer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--- script files --->
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="javascript.js"></script>
+</head>
 
-    <div class="tab">
-        <button class="tablinks" onclick="openTabs(event, 'abilities')" id="defaultOpen">Abilities</button>
-        <button class="tablinks" onclick="openTabs(event, 'pokedex')">Pokedex</button>
-        <button class="tablinks" onclick="openTabs(event, 'items')">Items</button>
-        <button class="tablinks" onclick="openTabs(event, 'moves')">Moves</button>
-        <button class="tablinks" onclick="openTabs(event, 'encounters')">Encounters</button>
-    </div>
-    <script>
-        document.getElementById("defaultOpen").click();
-    </script>
-    <!--- Ability Content Tab --->
-    <div id="abilities" class="tabcontent">
-        <h3>Abilities</h3>
-        <label>Enter text: </label><br>
-        <input type=text id="userin">
-        <input type=submit value="Search" onclick="getAbilities()"><br>
-
-        <body onload="empty()">
-
-        <p id="abilityDescription"></p>
-        <p>Pokemon with this ability:</p>
-
-        <p id="abilityImages"></p>
-        <p id="names"></p>
-        <div id="imghold">
-    </div>
-    </div>
-    <!--- Pokedex Content Tab --->
-    <div id="pokedex" class="tabcontent">
-        <body onload="empty()">
-        <h3>Pokedex</h3>
-        <label>Enter text: </label><br>
-        <input type=text id="pokemonin">
-        <input type=submit value="Search" onclick="getPokemon()"><br>
-        <label>Type:</label>
-        <label id="pokemontype"></label>
-        <label id="secondtype"></label><br>
-        <label>Held item:</Label>
-        <label id="helditemdata"></label><br>
-        <label>Height:</label>
-        <label id=height></label><br>
-        <label>Weight:</label>
-        <label id="weight"></label><br>
-        <label>Ability:</label>
-        <label id="pokemonability"></label><br>
-        <label>Second Ability:</label>
-        <label id="secondability"></label><br>
-        <label>Hidden Ability:</label>
-        <label id="hiddenability"></label><br>
-        <label>Dex Number:</label>
-        <label id="pokedexnumber"></label><br>
-        <label id="pokemonimage"></label>
-    </div>
-    <!--- Items Content Tab --->
-    <div id="items" class="tabcontent">
-        <h3>Items</h3>
-        <label>Enter an item below to see it's description. For multi word items like life orb, enter as life-orb</label><br><br>
-        <input type="text" id="itemin">
-        <input type="submit" value="Search" onclick="getItems()">
-        <p id="itemdata"></p>
-        <p id="itemimage"></p>
-    </div>
-    <!--- Move Content Tab--->
-    <div id="moves" class="tabcontent">
-        <h3>Moves</h3>
-        <input type="text" id="movein">
-        <input type="submit" value="Search" onclick="getMoves()"><br>
-        <label>Move power:</label>
-        <label id="movepower"></label><br>
-        <label>Accuracy:</label>
-        <label id="moveaccuracy"></label><br>
-        <label>PP:</label>
-        <label id="movepp"></label><br>
-        <label>Move type:</label>
-        <label id="movetype"></label><br>
-        <label>Effect:</label>
-        <label id="moveeffect"></label><br>
-        <label>Priority:</label>
-        <label id="movepriority"></label><br>
-        <label>Healing Power:</label>
-        <label id="movehealing"></label><br>
-        <label>Critical Hit Bonus:</label>
-        <label id="movecrit"></label><br>
-    </div>
-
-    <div id="encounters" class="tabcontent">
-        <h3>Encounters</h3>
-        <input type="text" id="encounterin">
-        <input type="submit" value="Search" onclick="getEncounters()">
-        <input type="submit" value="Reset" onclick="resetEncounters()"><br>
-        <labal>Encounter Details</labal>
-        <label id="encounterdetails"></label><br>
-    </div>
+<body>
+    <section id="pokedex" class="section section-2">
+        <div class="container">
+            <h3 class="title is-3">Pokedex</h3>
+        </div>
+        <div class="columns is-multiline is-desktop">
+            <div class="column">
+                <div class="box project=text">
+                    <article>
+                        <div>
+                            <input type="submit" value="Search" onclick="getPokemon()"><br>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
 
 
-    <script type = "text/javascript" src="assests/javascript/javascript.js"></script>
-    </body>
+
+
 </html>
 
