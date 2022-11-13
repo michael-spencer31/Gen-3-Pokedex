@@ -3,6 +3,20 @@ window.onload = function(){
     getPokemon();
 }
 
+const interval = setInterval(function(){
+    updateCaught();
+}, 5000);
+
+function updateCaught(){
+
+    //this checks the number of checkboxes on the page the user has checked
+    var numberCaught = document.querySelectorAll('input[type="checkbox"]:checked').length;
+    document.getElementById('caughtpokemon').innerHTML = "You have caught: " + numberCaught + "/134 Pokemon";
+
+    if(numberCaught == 134){
+        document.getElementById('caughtpokemon').innerHTML = "Congrats! You have completed the generation 3 Pokedex!";
+    }
+}
 function getPokemon(){
 
     let table = document.createElement("table");
@@ -14,7 +28,7 @@ function getPokemon(){
     //generation 3 starts at pokedex #252 (treecko) and goes to 386 (jirachi)
     const gen3Start = 252;
     const gen3End = 386;
-
+    //total of 134 pokemon
     table.appendChild(thead);
     table.appendChild(tbody);
 
@@ -89,6 +103,8 @@ function getPokemon(){
             row.appendChild(pokedexNum);
             row.appendChild(pokemonStats);
             tbody.appendChild(row);
+
+
         });
     }
 }
