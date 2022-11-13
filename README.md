@@ -1,6 +1,6 @@
-# Pokedex
+# Generation 3 Pokedex
 
-A Pokedex for the generation 3 games (ruby/sapphire/emerald). 
+A Pokedex for the generation 3 games (ruby/sapphire/emerald). Currently only includes new Pokemon from these games and no old Pokemon from generations 1 and 2.
 
 # Licence
 
