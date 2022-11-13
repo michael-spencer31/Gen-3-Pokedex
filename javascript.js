@@ -45,6 +45,7 @@ function getPokemon(){
         let pokedexNum = document.createElement("td");
         let pokemonType = document.createElement("td");
         let pokemonStats = document.createElement("td");
+        let isCaught = document.createElement("td");
         let imgURL = "";
         let pokemonBST = 0;
 
@@ -77,7 +78,9 @@ function getPokemon(){
                 pokemonBST += pokedexData.stats[j].base_stat;
             }
             pokemonStats.innerHTML = pokemonBST;
+            isCaught.innerHTML = "<input type='checkbox' name='caughtbox'>";
             //append the data to the table 
+            row.appendChild(isCaught);       
             row.appendChild(pokemon);
             row.appendChild(pokemonType);
             row.appendChild(pokedexNum);
