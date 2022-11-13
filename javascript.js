@@ -21,6 +21,8 @@ function getPokemon(){
     //create headings for the table and append them to the first row
     document.getElementById('body').appendChild(table);
     let row_heading = document.createElement("tr");
+    let caught_heading = document.createElement("th");
+    caught_heading.innerHTML = "Captured";
     let pokemon_heading = document.createElement("th");
     pokemon_heading.innerHTML = "Pokemon";
     let type_heading = document.createElement("th");
@@ -29,6 +31,7 @@ function getPokemon(){
     pokedex_heading.innerHTML = "Pokedex Number";
     let bst_heading = document.createElement("th");
     bst_heading.innerHTML = "BST";
+    row_heading.appendChild(caught_heading);
     row_heading.appendChild(pokemon_heading);
     row_heading.appendChild(type_heading);
     row_heading.appendChild(pokedex_heading);
