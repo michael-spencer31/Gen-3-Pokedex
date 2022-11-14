@@ -5,8 +5,17 @@ window.onload = function(){
 
 const interval = setInterval(function(){
     updateCaught();
-}, 5000);
+}, 500);
 
+var _checked = "";
+
+$(function(){
+    init();
+    $("#filter-checks :checkbox").click(function(){
+        $(".deliveryItem").hide();
+        if($(this).is(":checked")) _checked+=this.id+',';
+    })
+})
 function updateCaught(){
 
     //this checks the number of checkboxes on the page the user has checked
@@ -54,7 +63,7 @@ function getPokemon(){
 
     var idNum;
 
-    for(var i = gen3Start; i < gen3End; i++){
+    for(var i = gen3Start; i <= gen3End; i++){
 
         //setup table variables to use to populate the table later on
         let row = document.createElement("tr");
