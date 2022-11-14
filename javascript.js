@@ -20,7 +20,7 @@ function updateCaught(){
 
     //this checks the number of checkboxes on the page the user has checked
     var numberCaught = document.querySelectorAll('input[type="checkbox"]:checked').length;
-    document.getElementById('caughtpokemon').innerHTML = "You have caught: " + numberCaught + "/134 Pokemon";
+    document.getElementById('caughtpokemon').innerHTML = "You have caught: " + numberCaught + "/135 Pokemon";
 
     if(numberCaught == 134){
         document.getElementById('caughtpokemon').innerHTML = "Congrats! You have completed the generation 3 Pokedex!";
