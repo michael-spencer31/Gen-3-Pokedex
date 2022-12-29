@@ -1,6 +1,6 @@
 # Generation 3 Pokedex
 
-A Pokedex for the generation 3 games (ruby/sapphire/emerald). Currently only includes new Pokemon from these games and no old Pokemon from generations 1 and 2.
+A Pokedex for the generation 3 games (ruby/sapphire/emerald). Currently only includes new Pokemon from these games and no old Pokemon from generations 1 and 2. Does include updated stats/types from generation 9, like Ralts being a psychic/fairy type. 
 
 # Link
 
